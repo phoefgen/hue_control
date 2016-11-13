@@ -1,0 +1,17 @@
+language: python
+python:
+  - "2.7"
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install -y sloccount figlet
+  - pip install -r test_requirements.txt
+  - sudo easy_install clonedigger
+# command to install dependencies
+install: "pip install -r ./app/requirements.txt"
+# command to run tests
+script:
+  - make sloc
+  - make flakes
+  - make clone
+  - make lint
+  - make test
