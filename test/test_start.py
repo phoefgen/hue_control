@@ -11,3 +11,12 @@ class TestStart(unittest.TestCase):
         '''Tests that the hello method returns a string '''
 
         self.assertIsInstance(app.start.hello(), str)
+        return
+
+
+    def test_create_user(self):
+        ''' Create user function test.
+        expects: Bridge IP
+        returns: Registered Username'''
+
+        self.assertIsInstance(app.start.create_user('192.'))

@@ -27,4 +27,5 @@ RUN . $project_root/venv/bin/activate &&\
 # Python implementation from the project.
 
 CMD ["/bin/bash", "-c", \
-        "source $project_root/venv/bin/activate && $project_root/app/start.py "]
+        "source $project_root/venv/bin/activate &&\
+         $project_root/app/start.py "]
